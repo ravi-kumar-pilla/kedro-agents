@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+streamlit
+nbformat
+nbclient
+sentence-transformers
+faiss-cpu
+transformers
+torch
+pyyaml
+langchain
+langchain-ollama
+python-dotenv
+python-multipart
+pandas
