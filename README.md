@@ -147,9 +147,9 @@ streamlit run app.py
 4. Examine generated Kedro JSON structure
 5. Download configuration for manual Kedro project setup
 
-## 🗺 LangGraph Roadmap: From MVP to Production
+## From MVP to Production
 
-### Phase 1: Stateful Workflow Implementation
+### Stateful Workflow Implementation
 ```python
 # Planned LangGraph Structure
 from langgraph.graph import StateGraph
@@ -165,7 +165,7 @@ class MigrationState(TypedDict):
     project_path: str
 ```
 
-### Phase 2: Enhanced Features
+### Enhanced Features
 
 #### 🔄 **Multi-Step Workflow (Steps 1-9)**
 
@@ -206,24 +206,7 @@ class MigrationState(TypedDict):
            return {"retry_analysis": True, "temperature": state["temperature"] + 0.1}
    ```
 
-5. **🧪 Automated Testing Pipeline**
-   ```python
-   class TestGenerator:
-       def generate_unit_tests(self, functions: List[Function])
-       def create_mock_data(self, datasets: Dict)
-       def run_pytest_suite(self, test_files: List[str])
-       def analyze_test_results(self, results: TestResults)
-   ```
-
-6. **🗺 KedroViz Integration**
-   ```python
-   class KedroVizGenerator:
-       def create_pipeline_graph(self, nodes, datasets)
-       def generate_viz_metadata(self, kedro_structure)
-       def export_kedro_viz_json(self, graph_data)
-   ```
-
-7. **🏗 Project Scaffolding**
+5. **🏗 Project Scaffolding**
    ```python
    class KedroScaffolder:
        def create_project_structure(self, project_name)
@@ -232,7 +215,7 @@ class MigrationState(TypedDict):
        def create_requirements_txt(self, dependencies)
    ```
 
-8. **✅ Kedro-Specific Testing**
+6. **✅ Kedro-Specific Testing**
    ```python
    class KedroTestRunner:
        def adapt_tests_for_kedro(self, original_tests)
@@ -240,65 +223,7 @@ class MigrationState(TypedDict):
        def validate_data_catalog(self, catalog_config)
    ```
 
-## 🔮 Future LangGraph Architecture
-
-```mermaid
-graph TB
-    A[📁 Upload Notebooks] --> B[🧠 LangGraph StateManager]
-    B --> C[🔍 Multi-Agent Analysis]
-    C --> D[👥 Human Approval Loop]
-    D --> E[🧪 Test Generation & Execution]
-    E --> F[🏗 Kedro Structure Creation]
-    F --> G[📊 KedroViz Graph Generation]  
-    G --> H[👥 Human Approval Loop]
-    H --> I[🚀 Project Scaffolding]
-    I --> J[✅ Kedro Testing & Validation]
-    J --> K[🎯 Deployment Ready Project]
-    
-    subgraph "🤖 AI Agents"
-        C1[📋 Notebook Analyzer Agent]
-        C2[🔧 Code Quality Agent] 
-        C3[🧪 Test Generation Agent]
-        C4[⭐ Kedro Expert Agent]
-    end
-    
-    subgraph "💾 State Management"
-        S1[📊 Migration State]
-        S2[🔄 Checkpoint Manager]
-        S3[📝 Audit Trail]
-    end
-    
-    subgraph "🛠 Enhanced Tools"
-        T1[📁 Multi-Notebook Processor]
-        T2[🧠 RAG Kedro Knowledge Base]
-        T3[🧪 PyTest Generator]
-        T4[📊 KedroViz Generator]
-        T5[🏗 Project Scaffolder]
-    end
-    
-    C --> C1
-    C --> C2
-    C --> C3
-    C --> C4
-    
-    B --> S1
-    B --> S2
-    B --> S3
-    
-    C1 --> T1
-    C2 --> T2
-    C3 --> T3
-    C4 --> T4
-    I --> T5
-    
-    style A fill:#e3f2fd
-    style B fill:#f3e5f5
-    style K fill:#e8f5e8
-    style C1 fill:#fff3e0
-    style C2 fill:#fce4ec
-    style C3 fill:#e0f2f1
-    style C4 fill:#fff8e1
-```
+---
 
 ## 🤝 Contributing
 
@@ -318,7 +243,3 @@ This project is licensed under the the [Apache 2.0](https://github.com/ravi-kuma
 - [LangChain](https://langchain.com/) - For LLM orchestration capabilities
 - [Streamlit](https://streamlit.io/) - For the intuitive web interface
 - [Ollama](https://ollama.com/) - For local LLM deployment
-
----
-
-This roadmap transforms the current MVP into a comprehensive, production-ready migration system with human oversight, automated testing, and intelligent decision-making at every step.
